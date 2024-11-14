@@ -17,9 +17,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-
         <Nav />
-
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="la banda de rock" element={<LaBandaDeRockPage />} />
