@@ -2,9 +2,14 @@ import React from "react";
 import './../styles/pages/LiveAidPage.css'
 import Header from "../components/layout/Header";
 
+
 const LiveAidPage = (props) => {
     return (
         <main>
+            <div className="title">
+                <h1> Live Aid </h1>
+
+            </div>
             <Header />
             <div className="holder grid container">
                 <section className="liveaid">

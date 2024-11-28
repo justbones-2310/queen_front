@@ -4,22 +4,27 @@ import { NavLink } from "react-router-dom";
 
 const Nav = (props) => {
   return (
-    <div className='holder'>
+    <div>
       <nav>
-
-        <NavLink to="/">
-          <img src="../images/Logo-Queen (1).png" alt="Logo diseñado por Freddie Mercury"
-            className="logo-de-la-banda" />
-        </NavLink>
-
-        <ul className="nav-menu">
+        <input type="checkbox" name="" id="chk1"></input>
+        <div className="logo">
+          <NavLink to="/">
+            <img src="../images/Logo-Queen (1).png" alt="Logo diseñado por Freddie Mercury" />
+          </NavLink>
+        </div>
+        <ul>
           <li><NavLink to="/" className={({ isActive }) => isActive ? "activo" : undefined}>Home</NavLink></li>
           <li><NavLink to="/la banda de rock" className={({ isActive }) => isActive ? "activo" : undefined} >La Banda de Rock</NavLink></li>
-          <li><NavLink to="/musica" className={({ isActive }) => isActive ? "activo" : undefined} >Música</NavLink></li>
+          <li><NavLink to="/administrador" className={({ isActive }) => isActive ? "activo" : undefined} >Música</NavLink></li>
           <li><NavLink to="/live aid" className={({ isActive }) => isActive ? "activo" : undefined} >Live Aid</NavLink></li>
           <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "activo" : undefined} >Contacto</NavLink></li>
         </ul>
 
+        <div className='menu'>
+          <label for="chk1">
+            <i className="bi bi-navbar"></i>
+          </label>
+        </div>
       </nav>
     </div>
   );

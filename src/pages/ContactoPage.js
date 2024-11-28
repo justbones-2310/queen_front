@@ -2,9 +2,14 @@ import React from "react";
 import '../styles/pages/ContactoPage.css';
 import Header from "../components/layout/Header";
 
+
 const ContactoPage = (props) => {
   return (
     <main>
+      <div className="title">
+        <h1> Contacto  </h1>
+
+      </div>
       <Header />
       <section className="holder contacto">
         <div>
