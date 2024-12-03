@@ -17,7 +17,7 @@ const AdministradorPage = (props) => {
         const cargarAdministrador = async () => {
             setLoading(true);
 
-            const response = await axios.get('http://localhost:3000/api/administrador');
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/administrador`);
 
             setAdministrador(response.data);
             setLoading(false);
