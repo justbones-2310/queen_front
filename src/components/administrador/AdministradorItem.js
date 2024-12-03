@@ -8,7 +8,7 @@ const AdministradorItem = (props) => {
         <div className='administrador'>
             <h1> {title} </h1>
             <h2> {subtitle} </h2>
-            <img src={imagen} ></img>
+            <img src={imagen} alt={title}></img>
             <div dangerouslySetInnerHTML={{ __html: body }}></div>
             <hr />
         </div>
