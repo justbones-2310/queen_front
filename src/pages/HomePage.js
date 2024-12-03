@@ -4,8 +4,11 @@ import './../styles/pages/HomePage.css'
 
 
 const HomePage = (props) => {
+
+
     return (
         <div className="home">
+
             <div className="holder">
 
                 <div className="texto-portada">
@@ -20,10 +23,11 @@ const HomePage = (props) => {
                             Live Aid
                         </NavLink>
                     </div>
+
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 }
 

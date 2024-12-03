@@ -1,9 +1,43 @@
 import React from "react";
 import '../styles/pages/ContactoPage.css';
 import Header from "../components/layout/Header";
-
+import { useState } from "react";
+import axios from "axios";
 
 const ContactoPage = (props) => {
+
+  const initialForm = {
+    nombre: '',
+    email: '',
+    pais: '',
+    mensaje: ''
+  }
+
+  const [sending, setSending] = useState(false);
+  const [msg, setMsg] = useState('');
+  const [formData, setFormData] = useState(initialForm);
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setFormData(oldData => ({
+      ...oldData,
+      [name]: value
+    }));
+  }
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setMsg('');
+    setSending(true)
+    const response = await axios.post('http://localhost:3000/api/contacto', formData);
+
+    setSending(false);
+    setMsg(response.data.message);
+    if (response.data.error === false) {
+      setFormData(initialForm)
+    }
+  }
+
   return (
     <main>
       <div className="title">
@@ -15,31 +49,34 @@ const ContactoPage = (props) => {
         <div>
           <h2> Get in touch </h2>
 
-          <form action="" method="" className="formulario">
+          <form action="/contacto" method="post" onSubmit={handleSubmit} className="formulario">
             <p>
               <label for="nombre"> Nombre</label>
-              <input type="text" name="" />
+              <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} />
             </p>
 
             <p>
               <label for="email"> Email </label>
-              <input type="text" name="" />
+              <input type="text" name="email" value={formData.email} onChange={handleChange} />
             </p>
 
             <p>
               <label for="pais">País</label>
-              <input type="text" name="" />
+              <input type="text" name="pais" value={formData.pais} onChange={handleChange} />
             </p>
 
             <p>
               <label for="mensaje">Mensaje</label>
-              <textarea name="" id=""> </textarea>
+              <textarea name="mensaje" value={formData.mensaje} onChange={handleChange}></textarea>
             </p>
 
-            <p>
-              <input type="submit" value="Compartir" />
+            <p className="acciones">
+              <input type="submit" value="Enviar" />
             </p>
           </form>
+
+          {sending ? <p>Enviando ... </p> : null}
+          {msg ? <p> {msg} </p> : null}
 
         </div>
 
