@@ -5,18 +5,11 @@ import { useState } from 'react';
 
 const Nav = (props) => {
 
-  const toggleBtn = document.querySelector('.toggle_btn')
-  const toggleBtnIcon = document.querySelector('.toggle_btn i')
-  const dropDownMenu = document.querySelector('.dropdown_menu')
+  const [isOpen, setIsOpen] = useState(false);
 
-  toggleBtn.onclick = function () {
-    dropDownMenu.classList.toggle('open')
-    const isOpen = dropDownMenu.classList.contains('open')
-
-    toggleBtnIcon.classList = isOpen
-      ? 'bi bi-x-circle'
-      : 'bi bi-text-center'
-  }
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div>
@@ -35,16 +28,16 @@ const Nav = (props) => {
           <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "activo" : undefined} >Contacto</NavLink></li>
         </ul>
 
-        <div className="toggle_btn">
-          <i class="bi bi-text-center"></i>
-        </div>
-
-        <div className="dropdown_menu open">
+        <div className={`dropdown_menu ${isOpen ? 'open' : ''}`}>
           <li><NavLink to="/" className={({ isActive }) => isActive ? "activo" : undefined}>Home</NavLink></li>
           <li><NavLink to="/la banda de rock" className={({ isActive }) => isActive ? "activo" : undefined} >La Banda de Rock</NavLink></li>
           <li><NavLink to="/administrador" className={({ isActive }) => isActive ? "activo" : undefined} >Música</NavLink></li>
           <li><NavLink to="/live aid" className={({ isActive }) => isActive ? "activo" : undefined} >Live Aid</NavLink></li>
           <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "activo" : undefined} >Contacto</NavLink></li>
+        </div>
+
+        <div className="toggle_btn" onClick={toggleMenu}>
+          <i class="bi bi-text-center"></i>
         </div>
 
       </nav>
