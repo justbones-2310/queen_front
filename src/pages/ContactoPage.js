@@ -3,6 +3,7 @@ import '../styles/pages/ContactoPage.css';
 import Header from "../components/layout/Header";
 import { useState } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
 const ContactoPage = (props) => {
 
@@ -41,13 +42,38 @@ const ContactoPage = (props) => {
   return (
     <main>
       <div className="title">
+
         <h1> Contacto  </h1>
 
       </div>
+
       <Header />
       <section className="holder contacto">
+
+        <div className="social">
+
+          <h2> Un poco sobre mi </h2>
+          <p>Soy Bones, vivo en Buenos Aires, fan de Queen, mi momento favorito
+            del día es el atardecer y tengo tres perritos. Hace aproximadamente dos años
+            fallecio uno de ellos, me gustaba llamarla Queen.
+            <br />
+            Esta web site es en honor a ella, mi enana. Hasta el infinito
+            y más allá Salsita, líder de los Guardianes de la Vagancia. Te amo.
+          </p>
+
+          <div className="always">
+            <NavLink to="https://youtube.com/shorts/wl8edI9I_rc?si=1Zo3-KLBXZKpFhj9"
+              target="_blank">
+
+              <img src="/images/queen.jpg" alt="salsita" />
+
+            </NavLink>
+          </div>
+
+        </div>
+
         <div>
-          <h2> Get in touch </h2>
+          <h2> Pongamos en contacto </h2>
 
           <form action="/contacto" method="post" onSubmit={handleSubmit} className="formulario">
             <p>
@@ -80,22 +106,6 @@ const ContactoPage = (props) => {
 
         </div>
 
-        <div className="datos">
-          <h2> Me presento </h2>
-          <p>Soy Bones, vivo en Buenos Aires, fan de Queen, mi momento favorito
-            del día es el atardecer y tengo tres perritos. Hace aproximadamente dos años
-            fallecio uno de ellos, me gustaba llamarla Queen. Por algún lugar de esta página
-            compartí su foto.
-            <br />
-            En realidad, esta web site es en honor a ella. Hasta el infinito
-            y más allá Salsita, líder de los Guardianes de la Vagancia. Te amo.
-          </p>
-          <ul>
-            <li>Instagram</li>
-            <li>Discord</li>
-            <li>Email: justbones2310@gmail.com</li>
-          </ul>
-        </div>
       </section>
     </main>
   );

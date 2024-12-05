@@ -11,7 +11,7 @@ const LiveAidPage = (props) => {
 
             </div>
             <Header />
-            <div className="holder grid container">
+            <div className="grid-container">
                 <section className="liveaid">
 
                     <h1> 13 de julio de 1985 </h1>
@@ -31,14 +31,15 @@ const LiveAidPage = (props) => {
                     <p>
                         En ese espacio de tiempo Queen interpreto seis temas que quedarían inmortalizados para siempre.
                         Comenzaron con un fragmento de Bohemian Rhapsody que enlazaron con sus dos éxitos más recientes,
-                        Radio Ga Ga y Hammer To Fall. Entonces, Mercury se colgó una guitarra y recuperó ese tema que suena
-                        a viejo rock and roll, Crazy Little Thing Called Love. Finalmente, sellaron ese
-                        momento icónico en la historia del Rock con sus dos himnos: We Will Rock You y We Are The Champions.
+                        Radio Ga Ga y Hammer To Fall. En ese ambiente cargado de emoción, Mercury se colgó una guitarra y
+                        recuperó ese tema que suena a viejo rock and roll, Crazy Little Thing Called Love. Finalmente,
+                        sellaron ese momento icónico en la historia del Rock con sus dos himnos: We Will Rock You y
+                        We Are The Champions.
                     </p>
                 </article>
 
-                <aside className="links border">
-
+                <aside className="statue">
+                    <img src="/images/statue2.jpg" alt="estatua de bronce 1996" />
                 </aside>
             </div>
         </main>

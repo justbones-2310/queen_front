@@ -15,23 +15,10 @@ import ContactoPage from "./pages/ContactoPage";
 
 
 function App() {
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      const preloader = document.getElementById('preloader');
-      const content = document.getElementById('content');
-      preloader.style.display = 'none'; // Esconde el preloader
-      content.style.display = 'block'; // Muestra el contenido
-    }, 4000);
-  });
-
   return (
     <div className="App">
+      <div>
 
-      <div id="preloader">
-        <img src="./images/queen_bio3.jpg" alt="Cargando..." />
-      </div>
-
-      <div id="content">
         <BrowserRouter>
           <Nav />
           <Routes>

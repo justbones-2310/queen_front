@@ -4,6 +4,9 @@ const Footer = (props) => {
   return (
     <footer>
       <div className="social">
+
+        <p> Made by Bones </p>
+
         <a
           href="https://www.youtube.com/channel/UCiMhD4jzUqG-IgPzUmmytRQ"
           target="blank"
@@ -20,7 +23,6 @@ const Footer = (props) => {
           <i className="bi bi-twitter"></i>
         </a>
 
-        <p> Made by Bones </p>
       </div>
     </footer>
   );

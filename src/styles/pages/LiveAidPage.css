@@ -1,14 +1,15 @@
-.grid {
-  height: 100vh;
+.grid-container {
+  width: 100%;
+  min-height: 100vh;
   display: grid;
-  grid-gap: 1px;
+ 
   grid-template-columns: 30% 70%;
   grid-template-rows: 60% 40%;
   grid-template-areas: 
       "aside liveaid"
       "aside article";
   place-content: center;
-  
+  margin-bottom: 10px;
 }
 .liveaid {
   grid-area: liveaid;
@@ -19,45 +20,33 @@ article {
 aside {
   grid-area: aside;
 }
-@media (max-width:768px) {
-  .grid{
-    grid-template-columns: 100%;
-    grid-template-rows: 30% 40% 30%;
-    grid-template-areas: 'aside'
-                          'liveaid'
-                          'article';
-  }
-}
-.liveaid {
-  border: red solid 1px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
 .liveaid h1 {
   font-size: 24px;
   letter-spacing: 8px;
-  padding: 5px;
+  padding: 10px 0;
   color: #efb810; 
-}
-.concierto {
-  border: red solid 1px;
+  text-transform: uppercase;
 }
 .noticia {
-  border: red solid 1px;
-  padding: 10px;
-  place-self: center;
+  padding: 0 20px;
 }
 .noticia h1 {
   font-size: 24px;
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
-  color: #c39717;
+  color: #efb810;
 }
 .noticia p {
   font-size: 16px;
   letter-spacing: 4px;
   text-align: justify;
+}
+.statue {
+  padding: 5px 0;
+  margin-left: 25px;
+}
+.statue img {
+  width: 100%;
+  height: 100%;
 }
