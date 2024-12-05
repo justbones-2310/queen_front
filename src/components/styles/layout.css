@@ -31,15 +31,25 @@ i {
     cursor: pointer;
 }
 nav .logo {
-    flex: 2;
-    height: 4vh;
+    height: 10vh;
     margin-left: 50px;
+    margin: 2rem;
+    border-radius: 10%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    animation: shine 2s infinite alternate;
 }
-nav .logo:hover {
-    height: 7vh;
-    transition: 0.3s;
-    /*filter: drop-shadow(2px 2px 2px  );*/
+nav .logo:hover {  
+    transform: scale(1.1);
+}  
+  @keyframes shine {
+    0% {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px 15px rgba(255, 255, 255, 0.9);
+    }
 }
+
 nav ul{
     flex: 2;
     display: flex;

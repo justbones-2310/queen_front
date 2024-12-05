@@ -7,9 +7,9 @@ const Nav = (props) => {
     <div>
       <nav>
         <input type="checkbox" name="" id="chk1"></input>
-        <div className="logo">
+        <div>
           <NavLink to="/">
-            <img src="../images/Logo-Queen (1).png" alt="Logo diseñado por Freddie Mercury" />
+            <img src="../images/Logo-Queen (1).png" className="logo" alt="Logo diseñado por Freddie Mercury" />
           </NavLink>
         </div>
         <ul>
