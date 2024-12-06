@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import AdministradorItem from '../components/administrador/AdministradorItem';
-
+import './../styles/pages/AdministradorPage.css';
 import Header from "../components/layout/Header";
 
 
@@ -35,30 +35,20 @@ const AdministradorPage = (props) => {
             <Header />
 
             <section className="holder">
-                <div className="music-news">
-                    <h1> All we hear is radio ga ga ... </h1>
-                    {
-                        loading ? (
-                            <p> Cargando...</p>
-                        ) : (
-                            administrador.map(item => <AdministradorItem key={item.id}
-                                title={item.titulo} subtitle={item.subtitulo}
-                                imagen={item.imagen} body={item.cuerpo} />)
-                        )
-                    }
-
-                    {/*<h2>All we hear is radio ga ga</h2>
-                <div className="song-of-the-day">
-                    <h3>Un día como hoy Queen compartía con nosotros,
-                        los mortales, la canción </h3>
-                    <h4>Song</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quos dolorem sequi qui, non voluptatem.
-                        Cum voluptatibus veniam delectus placeat tempora distinctio quidem minima aspernatur, numquam dicta
-                        doloremque
-                        consectetur neque?
-                    </p>
-
-                    </div>*/}
+                <div className="musica">
+                    <div className="music-news">
+                        <h1> All we hear is radio ga ga ... </h1>
+                        <p> Por acá un poco de historia de las canciones de Queen ! </p>
+                        {
+                            loading ? (
+                                <p> Cargando...</p>
+                            ) : (
+                                administrador.map(item => <AdministradorItem key={item.id}
+                                    title={item.titulo} subtitle={item.subtitulo}
+                                    imagen={item.imagen} body={item.cuerpo} />)
+                            )
+                        }
+                    </div>
                 </div>
             </section>
         </main>
