@@ -35,7 +35,7 @@ const AdministradorPage = (props) => {
             <Header />
 
             <section className="holder">
-                <h2> Administrador </h2>
+                <h1> All we hear is radio ga ga ... </h1>
                 {
                     loading ? (
                         <p> Cargando...</p>
@@ -58,7 +58,6 @@ const AdministradorPage = (props) => {
                     </p>
 
                     </div>*/}
-
             </section>
         </main>
     );
