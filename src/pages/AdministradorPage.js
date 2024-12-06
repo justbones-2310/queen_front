@@ -39,6 +39,8 @@ const AdministradorPage = (props) => {
                     <div className="music-news">
                         <h1> All we hear is radio ga ga ... </h1>
                         <p> Por acá un poco de historia de las canciones de Queen ! </p>
+                    </div>
+                    <div>
                         {
                             loading ? (
                                 <p> Cargando...</p>
