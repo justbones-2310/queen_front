@@ -37,10 +37,9 @@ const AdministradorPage = (props) => {
             <section className="holder">
                 <div className="musica">
                     <div className="music-news">
-                        <h1> All we hear is radio ga ga ... </h1>
-                        <p> Por acá un poco de historia de las canciones de Queen ! </p>
-                    </div>
-                    <div>
+
+                        <h1> Por acá un poco de historia de las canciones de Queen ! </h1>
+
                         {
                             loading ? (
                                 <p> Cargando...</p>
