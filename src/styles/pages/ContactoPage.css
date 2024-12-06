@@ -66,3 +66,75 @@
     max-width: 100%;
     max-height: 100%;
 }
+
+@media (max-width: 768px) {
+    .contacto {
+        gap: 30px;
+        padding: 10px 15px;
+    }
+
+    .contacto div {
+        width: 90%;
+    }
+
+    .datos p {
+        font-size: 14px;
+    }
+
+    .datos ul li {
+        font-size: 13px;
+    }
+
+    .formulario p {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .formulario p label {
+        min-width: auto;
+        justify-content: flex-start;
+    }
+
+    .formulario input[type="submit"] {
+        left: 0;
+        align-self: center;
+    }
+}
+
+/* Responsivo para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    .contacto {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .contacto div {
+        width: 100%;
+    }
+
+    .datos p,
+    .datos ul li {
+        font-size: 12px;
+    }
+
+    .formulario textarea {
+        height: 150px;
+    }
+
+    .formulario p input,
+    .formulario p textarea {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .formulario input[type="submit"] {
+        font-size: 14px;
+        padding: 4px 8px;
+        left: 0;
+    }
+
+    .contacto .social {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

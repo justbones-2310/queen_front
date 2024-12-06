@@ -1,23 +1,21 @@
+
 /*inicio header*/
 header {
-    margin: auto;
     width: 100%;
     height: 50vh;
-    padding: 0 2rem;
     background-image: url(/public/images/queen-banner1.jpg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     position: relative;
+    top: 0;
 }
 /*Fin Header*/
 
 /*inicio nav*/
-  /* General styles */
 .navbar {
     width: 100%;
     height: 60px;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     position: absolute;
@@ -25,9 +23,9 @@ header {
     align-items: center;  
     z-index: 9998;
 }
-.navbar .logo img {
+.navbar .logo {
     height: 10vh;
-    margin-left: 50px;
+    margin-left: 10px;
 }
 .navbar .logo:hover {  
     transform: scale(1.1);
@@ -38,7 +36,6 @@ header {
 }  
 .navbar ul {
     list-style: none;
-    display: flex;
     gap: 20px;
     margin-right: 20px;
     padding: 10px;
@@ -49,7 +46,6 @@ header {
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    padding: 10x 15px;
 }
 .navbar ul li a.activo {
     color: #efb810;
@@ -70,58 +66,44 @@ header {
 }
 .dropdown_menu {
     display: none;
-    position: relative;
+    position: absolute;
+    right: 2rem;
+    top: 30px;
     height: 0;
+    width: 300px;
     background: rgba(255, 255, 255, 0,1);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(4px);
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.dropdown_menu li a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 10x 15px;
-}
 .dropdown_menu.open {
     height: 240px;
 }
-.dropdown_menu li {
+.dropdown_menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.7rem;
+}
+.dropdown_menu li a{
+    text-decoration: none;
+    color: #c39717;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.dropdown_menu li {
+    padding: 5px;
     display: flex;
     margin: auto;
-}
-  
-@media (max-width: 768px) {
-    .navbar .menu-items {
-        display: none;
-    }
-    .navbar .toggle_btn {
-        display: block;
-        margin-right: 20px;
-    }
-    .dropdown_menu {
-        display: block;
-
-    }
-}  
-@media (max-width: 480px) {
-
 }    
-
-
 /*fin nav*/
 
 /* title*/
 .title{
     z-index: 9998;
-    /*padding-top: var(--margin--desktop);
-    padding-right: var(--margin--desktop);
-    padding-left: var(--margin--desktop);*/
-    width: 100%;
     display: flex;
     position: absolute;
     inset: 0% 0% auto;
@@ -171,4 +153,43 @@ footer .social a {
   footer .social a:hover {
     opacity: 1;
 }
+@media (max-width: 768px) {
+    .navbar .menu-items {
+        display: none;
+    }
+    .navbar .toggle_btn {
+        display: block;
+       margin-right: 50px;
+    }
+    .dropdown_menu {
+        display: block;
+        z-index: 10;
+    }
+    .title h1 {
+        font-size: 30px;
+    }
+}  
+
+@media (max-width: 480px) {
+    .dropdown_menu {
+        left: 1rem;
+        width: unset;
+        backdrop-filter: blur(2px);
+    }
+    .navbar .toggle_btn {
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        display: active;
+        margin-right: 30px;
+    }
+    .title h1 {
+        font-size: 25px;
+    }
+    footer .social i,
+    footer .social p {
+        font-size: 16px;
+    }
+}
+  
 /*fin footer*/

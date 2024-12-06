@@ -1,5 +1,6 @@
+
 .home{
-  width: 100%;
+
   height: 100vh;
   padding: 16px 0;
   background-image: url(/public/images/queen-musicians.jpg);
@@ -127,5 +128,18 @@
   }
 }
 @media (max-width: 480px) {
-  
+    .home .texto-portada {
+      margin-top: 230px;
+    }
+    .home .texto-portada h1{
+      font-size: 7vh;
+    }
+    .home .texto-portada h2{
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .home .texto-portada .button .button1{
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
 }  

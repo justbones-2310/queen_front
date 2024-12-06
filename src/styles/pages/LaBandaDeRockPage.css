@@ -26,6 +26,7 @@
   padding: 1rem;
   width: 90%;
   max-width: 1200px;
+
 }
 .grid-item {
   text-align: center;
@@ -52,11 +53,13 @@
   font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .titulo-principal{
+    font-size: 20px;
+  }
   .grid-item h3 {
     font-size: 1rem;
   }
-
   .grid-item p {
     font-size: 0.8rem;
   }

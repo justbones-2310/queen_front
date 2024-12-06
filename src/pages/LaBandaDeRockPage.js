@@ -7,11 +7,13 @@ const LaBandaDeRockPage = (props) => {
 
   return (
     <main>
+
       <div className="title">
         <h1> La Banda de Rock!</h1>
-
       </div>
+
       <Header />
+
       <article className="holder">
         <section>
           <h2 className="titulo-principal"> A KIND OF MAGIC <br /> <span> Formación histórica</span> </h2>
