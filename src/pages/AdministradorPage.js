@@ -35,18 +35,19 @@ const AdministradorPage = (props) => {
             <Header />
 
             <section className="holder">
-                <h1> All we hear is radio ga ga ... </h1>
-                {
-                    loading ? (
-                        <p> Cargando...</p>
-                    ) : (
-                        administrador.map(item => <AdministradorItem key={item.id}
-                            title={item.titulo} subtitle={item.subtitulo}
-                            imagen={item.imagen} body={item.cuerpo} />)
-                    )
-                }
+                <div className="music-news">
+                    <h1> All we hear is radio ga ga ... </h1>
+                    {
+                        loading ? (
+                            <p> Cargando...</p>
+                        ) : (
+                            administrador.map(item => <AdministradorItem key={item.id}
+                                title={item.titulo} subtitle={item.subtitulo}
+                                imagen={item.imagen} body={item.cuerpo} />)
+                        )
+                    }
 
-                {/*<h2>All we hear is radio ga ga</h2>
+                    {/*<h2>All we hear is radio ga ga</h2>
                 <div className="song-of-the-day">
                     <h3>Un día como hoy Queen compartía con nosotros,
                         los mortales, la canción </h3>
@@ -58,6 +59,7 @@ const AdministradorPage = (props) => {
                     </p>
 
                     </div>*/}
+                </div>
             </section>
         </main>
     );
