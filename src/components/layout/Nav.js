@@ -16,7 +16,7 @@ const Nav = (props) => {
       <nav className="navbar">
         <div>
           <NavLink to="/">
-            <img src="../images/Logo-Queen.jpg" className="logo" alt="Logo diseñado por Freddie Mercury" />
+            <img src="../images/logo_queen.jpg" className="logo" alt="Logo diseñado por Freddie Mercury" />
           </NavLink>
         </div>
         <ul className="menu-items">
