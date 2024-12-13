@@ -5,6 +5,11 @@ import { useState } from 'react';
 
 const Nav = (props) => {
 
+  const playSound = () => {
+    const audio = new Audio("/sounds/liveaid1985.mp3");
+    audio.play();
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -12,6 +17,7 @@ const Nav = (props) => {
   };
 
   return (
+
     <div>
       <nav className="navbar">
         <div>
@@ -23,7 +29,7 @@ const Nav = (props) => {
           <li><NavLink to="/" className={({ isActive }) => isActive ? "activo" : undefined}>Home</NavLink></li>
           <li><NavLink to="/la banda de rock" className={({ isActive }) => isActive ? "activo" : undefined} >La Banda de Rock</NavLink></li>
           <li><NavLink to="/administrador" className={({ isActive }) => isActive ? "activo" : undefined} >Música</NavLink></li>
-          <li><NavLink to="/live aid" className={({ isActive }) => isActive ? "activo" : undefined} >Live Aid</NavLink></li>
+          <li><NavLink to="/live aid" onClick={playSound} className={({ isActive }) => isActive ? "activo" : undefined} >Live Aid</NavLink></li>
           <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "activo" : undefined} >Contacto</NavLink></li>
         </ul>
 

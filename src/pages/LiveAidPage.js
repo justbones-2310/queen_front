@@ -17,7 +17,7 @@ const LiveAidPage = (props) => {
                     <h1> 13 de julio de 1985 </h1>
 
                     <div className="concierto">
-                        <iframe width="560" height="315"
+                        <iframe
                             src="https://www.youtube.com/embed/_9pfbgpYDsk?si=bqjU7Hlz5cu7xusy"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; 

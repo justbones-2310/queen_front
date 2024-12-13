@@ -5,6 +5,10 @@ import './../styles/pages/HomePage.css'
 
 const HomePage = (props) => {
 
+    const playSound = () => {
+        const audio = new Audio("/sounds/liveaid1985.mp3");
+        audio.play();
+    };
 
     return (
         <div className="home">
@@ -15,7 +19,7 @@ const HomePage = (props) => {
                     <h1> QUEEN </h1>
                     <h2> The Show Must Go On! </h2>
                     <div className="button">
-                        <NavLink to="/live aid" className="button1">
+                        <NavLink to="/live aid" onClick={playSound} className="button1">
                             <span id="span1"></span>
                             <span id="span2"></span>
                             <span id="span3"></span>

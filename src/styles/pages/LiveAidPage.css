@@ -1,8 +1,5 @@
 .grid-container {
-  width: 100%;
-
   display: grid;
- 
   grid-template-columns: 30% 70%;
   grid-template-rows: 60% 40%;
   grid-template-areas: 
@@ -27,8 +24,32 @@ aside {
   color: #efb810; 
   text-transform: uppercase;
 }
-.noticia {
+.statue {
+  padding: 5px 0;
+  margin-left: 25px;
+}
+.statue img {
+  width: 100%;
+  height: 100%;
+}
+.concierto {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.concierto iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
   padding: 0 20px;
+}
+.noticia {
+  width: 100%;
+  top: 100px;
 }
 .noticia h1 {
   font-size: 24px;
@@ -41,14 +62,6 @@ aside {
   font-size: 16px;
   letter-spacing: 4px;
   text-align: justify;
-}
-.statue {
-  padding: 5px 0;
-  margin-left: 25px;
-}
-.statue img {
-  width: 100%;
-  height: 100%;
 }
 
 @media (max-width: 768px) {
