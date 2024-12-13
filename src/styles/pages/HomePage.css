@@ -128,6 +128,9 @@
   }
 }
 @media (max-width: 480px) {
+    .home {
+      background-image: url(/public/images/mobile/queen_mobile1.jpg);
+    }
     .home .texto-portada {
       margin-top: 230px;
     }
