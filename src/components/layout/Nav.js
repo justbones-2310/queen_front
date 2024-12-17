@@ -1,4 +1,3 @@
-//import { Link } from "react-router-dom";
 import '.././styles/layout.css';
 import { NavLink } from "react-router-dom";
 import { useState } from 'react';
@@ -34,7 +33,7 @@ const Nav = (props) => {
         </ul>
 
         <div className="toggle_btn" onClick={toggleMenu}>
-          <i class="bi bi-text-center"></i>
+          <i className="bi bi-text-center"></i>
         </div>
       </nav>
 
@@ -42,7 +41,7 @@ const Nav = (props) => {
         <li><NavLink to="/" className={({ isActive }) => isActive ? "activo" : undefined}>Home</NavLink></li>
         <li><NavLink to="/la banda de rock" className={({ isActive }) => isActive ? "activo" : undefined} >La Banda de Rock</NavLink></li>
         <li><NavLink to="/administrador" className={({ isActive }) => isActive ? "activo" : undefined} >Música</NavLink></li>
-        <li><NavLink to="/live aid" className={({ isActive }) => isActive ? "activo" : undefined} >Live Aid</NavLink></li>
+        <li><NavLink to="/live aid" onClick={playSound} className={({ isActive }) => isActive ? "activo" : undefined} >Live Aid</NavLink></li>
         <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "activo" : undefined} >Contacto</NavLink></li>
       </div>
 

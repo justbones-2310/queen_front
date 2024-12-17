@@ -3,28 +3,30 @@ import './../styles/pages/LiveAidPage.css'
 import Header from "../components/layout/Header";
 
 
+
 const LiveAidPage = (props) => {
+
     return (
-        <main>
+        <div>
+
+            <Header />
+
             <div className="title">
                 <h1> Live Aid </h1>
-
             </div>
-            <Header />
-            <div className="grid-container">
-                <section className="liveaid">
+
+            <div className="grid-container holder">
+
+                <main className="liveaid">
 
                     <h1> 13 de julio de 1985 </h1>
 
                     <div className="concierto">
                         <iframe
-                            src="https://www.youtube.com/embed/_9pfbgpYDsk?si=bqjU7Hlz5cu7xusy"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                            gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            src="https://www.youtube.com/embed/_9pfbgpYDsk?si=bqjU7Hlz5cu7xusy">
+                        </iframe>
                     </div>
-                </section>
+                </main>
 
                 <article className="noticia">
                     <h1> Veinte minutos de delirio</h1>
@@ -38,11 +40,16 @@ const LiveAidPage = (props) => {
                     </p>
                 </article>
 
-                <aside className="statue">
-                    <img src="/images/statue2.jpg" alt="estatua de bronce 1996" />
+                <section className="gallery">
+                    <img src="./images/1985.jpg" className="img-fluid" alt="varios" />
+                </section>
+
+                <aside className="map">
+                    <h1>Mapa con Marcadores</h1>
                 </aside>
+
             </div>
-        </main>
+        </div>
     );
 }
 

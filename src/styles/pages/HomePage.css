@@ -102,9 +102,21 @@
   transition: 1s;
   transition-delay: 0.75s;
 }
+
+
+@media (max-width: 2560px) {
+  .home .texto-portada{
+    margin-top: 600px;
+  }
+}
+@media (max-width: 1024px) {
+  .home .texto-portada{
+    margin-top: 400px;
+  }
+}
 @media (max-width: 768px) {
   .home .texto-portada{
-    margin-top: 200px;
+    margin-top: 300px;
     margin-bottom: 100px;
     text-align: center;
     padding: 20px 0;
@@ -132,7 +144,7 @@
       background-image: url(/public/images/mobile/queen_mobile1.jpg);
     }
     .home .texto-portada {
-      margin-top: 330px;
+      margin-top: 100px;
     }
     .home .texto-portada h1{
       font-size: 7vh;
@@ -144,5 +156,6 @@
     .home .texto-portada .button .button1{
       letter-spacing: 2px;
       font-size: 16px;
+      margin-top: 100px;
     }
 }  
