@@ -7,7 +7,9 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  
+  position: relative;
+  top: 0;
+  margin: 0;
 }
 .home .texto-portada{
   margin-top: 300px;
@@ -111,12 +113,12 @@
 }
 @media (max-width: 1024px) {
   .home .texto-portada{
-    margin-top: 400px;
+    margin-top: 300px;
   }
 }
 @media (max-width: 768px) {
   .home .texto-portada{
-    margin-top: 300px;
+    margin-top: 200px;
     margin-bottom: 100px;
     text-align: center;
     padding: 20px 0;
@@ -144,7 +146,7 @@
       background-image: url(/public/images/mobile/queen_mobile1.jpg);
     }
     .home .texto-portada {
-      margin-top: 100px;
+      margin-top: 90px;
     }
     .home .texto-portada h1{
       font-size: 7vh;
