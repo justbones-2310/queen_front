@@ -72,7 +72,7 @@ const LiveAidPage = (props) => {
 
                     <div className="concierto">
                         <iframe
-                            src="https://www.youtube.com/embed/_9pfbgpYDsk?si=bqjU7Hlz5cu7xusy" alt="cargando..."   >
+                            src="https://www.youtube.com/embed/_9pfbgpYDsk?si=bqjU7Hlz5cu7xusy" alt="cargando..." title="show"  >
                         </iframe>
                     </div>
                 </main>
@@ -94,7 +94,7 @@ const LiveAidPage = (props) => {
                         <h2> Visita el estadio de Wembley </h2>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9948.979455083153!2d-0.28636716802004085!3d51.55602127898161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876136f668ca2e3%3A0x7c43b58b9971e1ea!2sWembley%20Stadium!5e0!3m2!1sen!2suk!4v1697576353452!5m2!1sen!2suk"
-                            alt="cargando..."
+                            alt="cargando..." title="stadium"
                         ></iframe>
                     </section>
                     <aside className={`weather ${weatherVisible ? "visible" : ""}`}>
