@@ -1,68 +1,146 @@
-.titulo-principal {
-  color: white;
-  padding: 16px 0;
-  margin-bottom: 0;
+.history {
+  width: 100%;
+  height: 50vh;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  /*background: black;*/
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.titulo-principal span {
-  color: #000; 
-  text-shadow: 0 0 5px #ccc, 0 0 10px #bbb, 0 0 15px #fff, 0 0 20px #fff;
-  animation: grayGlow 2s infinite alternate;
+.history h1 {
+  margin: 0 0 10px 0; /* Espacio inferior entre el título y el párrafo */
+  text-transform: uppercase;
+}  
+.history p {
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  line-height: 2;
+  letter-spacing: 1px;
+  text-align: justify;
+  padding: 0 40px;
 }
-@keyframes grayGlow {
-  0% {
-    text-shadow: 0 0 5px #ccc, 0 0 10px #bbb, 0 0 15px #fff, 0 0 20px #fff;
-  }
-  50% {
-    text-shadow: 0 0 10px #bbb, 0 0 15px #aaa, 0 0 20px #eee, 0 0 25px #fff;
-  }
-  100% {
-    text-shadow: 0 0 5px #ccc, 0 0 10px #bbb, 0 0 15px #fff, 0 0 20px #fff;
-  }
-}
+
+
 .container {
   display: grid;
-  grid-template-columns: /*repeat(auto-fit, minmax(200px, 1fr))*/ 1fr;
+  grid-template-columns: /*repeat(auto-fit, minmax(250px, 1fr))*/ 1fr;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
-  padding: 1rem;
-  width: 90%;
-  max-width: 1200px;
-
+  width: 100%;
+  perspective: 1000px; /* Habilita la perspectiva 3D */
 }
 .grid-item {
+  /*background-color: rebeccapurple;*/
+  width: 100%;
+  height: 100vh;
   text-align: center;
   padding: 1rem;
   transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1.5s ease-out forwards;
+  position: relative;
+  aspect-ratio: 1; /* Cuadrado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
 }
-.grid-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-.grid-item img {
+.grid-item .flip-container {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  height: 100%;
+  transform-style: preserve-3d; /* Habilita transformaciones 3D */
+  transition: transform 2s; /* Suaviza el giro */
+}
+.grid-item:hover .flip-container {
+  transform: rotateY(180deg);
+}
+
+/* Animación para hacer aparecer los elementos desde la izquierda */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Estilos de las caras del flip */
+.grid-item .front,
+.grid-item .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la cara trasera al no estar activa */
+  display: flex;
+  flex-direction: column; /* Alineación vertical */
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.grid-item .front {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.grid-item .front img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover; /* Asegura que la imagen llene el espacio */
+}
+.grid-item .back {
+  background: #222; /* Fondo oscuro para la parte trasera */
+  color: #fff; /* Texto claro para contraste */
+  transform: rotateY(180deg); /* Prepara la cara trasera para aparecer al girar */
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
 }
 .grid-item h3 {
   margin: 0.5rem 0 0.2rem;
   font-size: 1.2rem;
-  color: #efb810;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
 }
 .grid-item p {
   margin: 0;
-  color: #efb810;
   font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-@media (max-width: 768px) {
-  .titulo-principal{
-    font-size: 20px;
-  }
-  .grid-item h3 {
-    font-size: 1rem;
-  }
-  .grid-item p {
-    font-size: 0.8rem;
-  }
-}  
 
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0.9;
+}
 
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.whatsapp-button i {
+  font-size: 24px;
+}

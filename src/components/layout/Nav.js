@@ -25,16 +25,17 @@ const Nav = (props) => {
           </NavLink>
         </div>
         <ul className="menu-items">
-          <li><NavLink to="/" className={({ isActive }) => isActive ? "activo" : undefined}>Home</NavLink></li>
-          <li><NavLink to="/la banda de rock" className={({ isActive }) => isActive ? "activo" : undefined} >La Banda de Rock</NavLink></li>
-          <li><NavLink to="/administrador" className={({ isActive }) => isActive ? "activo" : undefined} >Música</NavLink></li>
-          <li><NavLink to="/live aid" onClick={playSound} className={({ isActive }) => isActive ? "activo" : undefined} >Live Aid</NavLink></li>
-          <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "activo" : undefined} >Contacto</NavLink></li>
+          <li><NavLink to="/" className={({ isActive }) => isActive ? "activo" : undefined} > Home </NavLink></li>
+          <li><NavLink to="/la banda de rock" className={({ isActive }) => isActive ? "activo" : undefined} > La Banda de Rock </NavLink></li>
+          <li><NavLink to="/administrador" className={({ isActive }) => isActive ? "activo" : undefined} > Música </NavLink></li>
+          <li><NavLink to="/live aid" onClick={playSound} className={({ isActive }) => isActive ? "activo" : undefined} > Live Aid </NavLink></li>
+          <li><NavLink to="/contacto" className={({ isActive }) => isActive ? "activo" : undefined} > Contacto </NavLink></li>
         </ul>
 
         <div className="toggle_btn" onClick={toggleMenu}>
           <i className="bi bi-text-center"></i>
         </div>
+
       </nav>
 
       <div className={`dropdown_menu ${isOpen ? 'open' : ''}`}>

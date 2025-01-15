@@ -1,7 +1,8 @@
-
-.home{
+.home .portada{
+  margin-bottom: 100px;
+  padding: 20px 0;
+  text-transform: uppercase;
   height: 100vh;
-  padding: 16px 0;
   background-image: url(/public/images/queen-musicians.jpg);
   padding: 16px 0;
   background-repeat: no-repeat;
@@ -11,30 +12,21 @@
   top: 0;
   margin: 0;
 }
-.home .texto-portada{
+.home .portada h1{
   margin-top: 300px;
-  margin-bottom: 100px;
-  text-align: center;
-  padding: 20px 0;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  justify-content: center;
-}
-.home .texto-portada h1{
   font-size: 10vh;
   font-weight: 100;
   letter-spacing: 8px;
-  margin-bottom: 40px;
   color: #efb810; 
 }
-.home .texto-portada h2{
+.home .portada h2{
   font-size: 25px;
   font-weight: 100;
   letter-spacing: 2px;
   color: #c39717;
   padding: 16px 0;
 }
-.home .texto-portada .button .button1{
+.home .portada .button .button1{
   position: relative;
   display: inline-block;
   padding: 15px 30px;
@@ -45,7 +37,7 @@
   overflow: hidden;
   transition: 0.2s;
 }
-.home .texto-portada .button .button1:hover{
+.home .portada .button .button1:hover{
   background-color: #ffda95;
   box-shadow: 
     0 0 10px #ffda95, 0 0 40px #ffda95,
@@ -53,7 +45,7 @@
   opacity: 75%;
   transition-delay: 1s;
 }
-.home .texto-portada .button .button1 span{
+.home .portada .button .button1 span{
   position: absolute;
   display: block;
 }
@@ -64,7 +56,7 @@
   height: 2px;
   background: linear-gradient(90deg,transparent,#ffda95);
 }
-.home .texto-portada .button .button1:hover #span1{
+.home .portada .button .button1:hover #span1{
   left: 100%;
   transition: 1s;
 }
@@ -75,7 +67,7 @@
   height: 100%;
   background: linear-gradient(180deg,transparent,#ffda95);
 }
-.home .texto-portada .button .button1:hover #span2{
+.home .portada .button .button1:hover #span2{
   top: 100%;
   transition: 1s;
   transition-delay: 0.25s;
@@ -87,7 +79,7 @@
   height: 2px;
   background: linear-gradient(270deg,transparent,#ffda95);
 }
-.home .texto-portada .button .button1:hover #span3{
+.home .portada .button .button1:hover #span3{
   right: 100%;
   transition: 1s;
   transition-delay: 0.50s;
@@ -99,65 +91,142 @@
   height: 100%;
   background: linear-gradient(360deg,transparent,#ffda95);
 }
-.home .texto-portada .button .button1:hover #span4{
+.home .portada .button .button1:hover #span4{
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
 }
 
 
-@media (max-width: 2560px) {
-  .home .texto-portada{
-    margin-top: 600px;
-  }
+.team {
+  background-color: red;
+  width: 100%;
 }
-@media (max-width: 1024px) {
-  .home .texto-portada{
-    margin-top: 300px;
-  }
+.team ul {
+  list-style: none;
+  padding: 0;
 }
-@media (max-width: 768px) {
-  .home .texto-portada{
-    margin-top: 200px;
-    margin-bottom: 100px;
-    text-align: center;
-    padding: 20px 0;
-    box-sizing: border-box;
-    text-transform: uppercase;
-    justify-content: center;
-  }
-  .home .texto-portada h1{
-    font-size: 8vh;
-    font-weight: 100;
-    letter-spacing: 8px;
-    margin-bottom: 40px;
-    color: #efb810; 
-  }
-  .home .texto-portada h2{
-    font-size: 16px;
-    font-weight: 100;
-    letter-spacing: 2px;
-    color: #c39717;
-    padding: 16px 0;
-  }
+.team li {
+  width: 25%;
+  display: inline-block;
+  position: relative;
+
 }
-@media (max-width: 480px) {
-    .home {
-      background-image: url(/public/images/mobile/queen_mobile1.jpg);
-    }
-    .home .texto-portada {
-      margin-top: 90px;
-    }
-    .home .texto-portada h1{
-      font-size: 7vh;
-    }
-    .home .texto-portada h2{
-      font-size: 16px;
-      font-weight: 800;
-    }
-    .home .texto-portada .button .button1{
-      letter-spacing: 2px;
-      font-size: 16px;
-      margin-top: 100px;
-    }
-}  
+.team a {
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px 0;
+}
+
+
+
+.bienvenida {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  /*background-color: red;*/
+}
+.container-images {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  /*border: solid 1px blueviolet;*/
+  position: relative;
+}
+.carrusel {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.photo-section {
+  width: calc(100% / 5);
+  height: 95%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.photo-section:hover {
+  transform: translateY(-5px);
+}
+.photo-section img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.btn-right,
+.btn-left {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: whitesmoke;
+  transform: translate(0, -50%);
+  transition: .5s ease;
+}
+.btn-right {
+  right: 10px;
+}
+.btn-left {
+  left: 10px;
+}
+.btn-right:hover,
+.btn-left:hover {
+  color: #efb810;
+}
+
+
+.spotify {
+  width: 50%;
+  height: 400px;
+  /*border: solid 1px blueviolet;*/
+  align-items: center;
+}
+.spotify iframe {
+  width: 90%;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.spotify iframe:hover {
+  transform: translateY(5px);
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.whatsapp-button i {
+  font-size: 24px;
+}
